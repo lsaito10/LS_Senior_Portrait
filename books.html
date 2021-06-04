@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Books Quoted</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="Lynca_Pic.jpg" style="width:80%; height:190px" class="w3-round"><br><br>
+    <h4><b>Lynca Saito</b></h4>
+    <h4 class="w3-text-grey">Senior Portrait</h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-home fa-fw w3-margin-right"></i>HOME</a> 
+    <a href="chapter1.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-pencil fa-fw w3-margin-right"></i>CHAPTER 1</a> 
+    <a href="chapter2.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-pencil fa-fw w3-margin-right"></i>CHAPTER 2</a>
+    <a href="chapter3.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-pencil fa-fw w3-margin-right"></i>CHAPTER 3</a>
+    <a href="chapter4.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-pencil fa-fw w3-margin-right"></i>CHAPTER 4</a>
+    <a href="books.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="	fa fa-book fa-fw w3-margin-right"></i>BOOKS QUOTED</a>
+  </div>
+  <div class="w3-panel w3-large">
+  </div>
+</nav>
+
+
+<div class="w3-main" style="margin-left:300px">
+
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="homefire.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="Home Fire, Kamila Shamsie">
+      <img src="norwegian.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="Norwegian Wood, Haruki Murakami">
+    </div>
+
+    <div class="w3-third">
+      <img src="gatsby.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="The Great Gatsby, Scott Fitzgerald">
+      <img src="rye.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="The Catcher in the Rye, J.D. Salinger">
+    </div>
+      
+    <div class="w3-third">
+       <img src="namesake.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="The Namesake, Jhumpa Lahiri"> 
+      <img src="dorian.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="The Picture of Dorian Gray, Oscar Wilde"> 
+    </div>
+      
+    
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="road.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="Revolutionary Road, Richard Yates">
+      <img src="wao.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="The Brief Wondrous Life of Oscar Wao, Junot Díaz">
+    </div>
+
+    <div class="w3-third">
+      <img src="teeth.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="White Teeth, Zadie Smith">
+      <img src="exit.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="Exit West, Mohsin Hamid">
+    </div>
+      
+    <div class="w3-third">
+      <img src="waiting.jpeg" style="width:100%;height:450px;" onclick="onClick(this)" alt="Waiting, Ha Jin"> 
+    </div>
+  
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
